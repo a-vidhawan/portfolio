@@ -1,0 +1,186 @@
+// src/components/About.jsx
+import React, { useState } from 'react';
+
+/**
+ * About section with toggleable Skill Map.
+ * - Default: About text + compact skills on the right.
+ * - On "+": About fades out; Skill Map scales in from the top-right.
+ *   When closing, it scales back into the top-right.
+ * - Because both views live inside the same card, sections below
+ *   naturally slide down/up (no overlay collision).
+ */
+function About() {
+  const [showSkills, setShowSkills] = useState(false);
+
+  const topSkills = [
+    'SystemVerilog / Verilog',
+    'RISC-V & ARM',
+    'Embedded C/C++',
+    'ESP32 / CH32V',
+    'Digital Design & Timing',
+    'FPGA (Quartus / Vivado)',
+    'PCB & Circuit Design',
+  ];
+
+  const categories = {
+    Firmware: [
+      'C, C++ (bare-metal & RTOS)',
+      'Arduino / ESP32 / STM32 / CH32V',
+      'FreeRTOS & task scheduling',
+      'SPI, I²C, UART, USART drivers',
+      'Low-level bring-up & debugging',
+    ],
+    Hardware: [
+      'Custom ISA & CPU design',
+      'RISC-V pipelines & hazards',
+      'SystemVerilog RTL & testbenches',
+      'FPGA prototyping (Cyclone V, Vivado)',
+      'Viterbi encoder/decoder, encoding chains',
+      'Power & driver stages (BLDC, solenoids)',
+    ],
+    Software: [
+      'Python, Java, JavaScript',
+      'React, HTML, CSS',
+      'Operating Systems (Nachos)',
+      'Linux, shell tooling',
+      'Intro CUDA & parallel patterns',
+    ],
+    Tools: [
+      'Quartus, ModelSim, Vivado',
+      'PSpice / LTSpice',
+      'KiCad / Eagle',
+      'Git / GitHub',
+      'VS Code, JIRA, Confluence',
+      'Scopes, DMMs, lab equipment',
+    ],
+    'Other Skills': [
+      'Technical tutoring & workshop design',
+      'Team leadership (MacroPad project)',
+      'Documentation & reproducible notes',
+      'Cross-functional communication',
+    ],
+  };
+
+  return (
+    <div className="bg-slate-950/80 border border-slate-800/70 rounded-3xl p-8 md:p-10 backdrop-blur overflow-hidden">
+      {/* ABOUT VIEW */}
+      <div
+        className={`transition-opacity duration-300 ${
+          showSkills
+            ? 'opacity-0 pointer-events-none absolute'
+            : 'opacity-100 relative'
+        }`}
+      >
+        <div className="grid md:grid-cols-3 gap-8 items-start">
+          {/* About text */}
+          <div className="md:col-span-2 space-y-4">
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-50">
+              About Me
+            </h2>
+            <p className="text-sm md:text-base text-slate-300/90">
+              I&apos;m a computer architecture and embedded systems engineer who
+              likes thinking about systems from the ISA down to timing diagrams
+              and then back up to firmware and tools. I enjoy designing custom
+              processors, debugging weird FPGA timing issues, and building the
+              firmware that makes hardware feel effortless to use.
+            </p>
+            <p className="text-sm md:text-base text-slate-300/90">
+              Recently I&apos;ve been splitting time between tutoring computer
+              architecture, leading a Macropad project and digital logic labs,
+              and exploring RISC-V microcontrollers and SoC-style designs.
+            </p>
+          </div>
+
+          {/* compact skills summary */}
+          <div className="md:col-span-1">
+            <div className="relative bg-slate-900/70 border border-slate-700/70 rounded-2xl p-4 space-y-3">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-slate-100">
+                  Core Skills
+                </h3>
+                <button
+                  type="button"
+                  onClick={() => setShowSkills(true)}
+                  className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-sky-500/70 text-sky-300 text-sm hover:bg-sky-500/10 transition"
+                  aria-label="Expand full skills"
+                >
+                  +
+                </button>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {topSkills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-[11px] px-2.5 py-1 rounded-full bg-sky-900/40 text-sky-100 border border-sky-700/50"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <p className="text-[11px] text-slate-400">
+                Tap the <span className="font-semibold text-sky-300">+</span> to
+                see the full skill map.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SKILL MAP VIEW */}
+      <div
+        className={`transform-gpu origin-top-right transition-all duration-300 ${
+          showSkills
+            ? 'opacity-100 scale-100 relative'
+            : 'opacity-0 scale-95 pointer-events-none absolute'
+        }`}
+      >
+        <div className="flex items-center justify-between mb-4 md:mb-6">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-50">
+              Skill Map
+            </h2>
+            <p className="text-xs md:text-sm text-slate-400">
+              Firmware, hardware, software, tools &amp; everything in between.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowSkills(false)}
+            className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-slate-600 text-slate-200 text-lg hover:bg-slate-800 transition"
+            aria-label="Close skills"
+          >
+            &minus;
+          </button>
+        </div>
+
+        <div className="grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 text-sm">
+          {Object.entries(categories).map(([label, skills]) => (
+            <div
+              key={label}
+              className="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-4 space-y-2"
+            >
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-sky-300">
+                {label}
+              </h3>
+              <ul className="space-y-1.5 text-slate-200">
+                {skills.map((s) => (
+                  <li key={s} className="flex gap-1.5">
+                    <span className="mt-[6px] h-1 w-1 rounded-full bg-sky-400" />
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-4 text-[11px] md:text-xs text-slate-500">
+          Hit the &minus; in the top right to collapse the skill map and return
+          to the About view.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default About;
