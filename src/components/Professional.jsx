@@ -6,77 +6,77 @@ import { useNavigate } from "react-router-dom";
 export const experienceList = [
   {
     id: "exp1",
-    title: "Computer Architecture Engineer",
-    company: "ABC Technology Inc.",
-    period: "June 2023 – Present",
-    summary: "Designed high‑performance RISC‑V CPU cores and optimised memory hierarchies.",
+    title: "CSE Department Tutor",
+    company: "UC San Diego",
+    period: "June 2025 – Present",
+    summary: "Orchestrated academic success for 50+ students in Computer Architecture, driving measurable grade improvements through targeted intervention.",
   },
   {
     id: "exp2",
-    title: "Embedded Systems Engineer",
-    company: "XYZ Robotics",
-    period: "Jul 2021 – May 2023",
-    summary: "Developed RTOS‑based firmware and low‑level drivers for robotics platforms.",
+    title: "Research Intern - VLSI System Design",
+    company: "Bangalore, India",
+    period: "Oct 2024 – Nov 2024",
+    summary: "Profiled RISC-V instruction execution and optimized assembly loops, slashing execution cycles by ~10% while preserving functionality.",
   },
   {
     id: "exp3",
-    title: "Graduate Research Assistant",
-    company: "University of California",
-    period: "Sep 2019 – Jun 2021",
-    summary: "Investigated cache coherence protocols and energy‑efficient microarchitectures.",
+    title: "Student Developer",
+    company: "UCSD ITS",
+    period: "Oct 2023 – June 2024",
+    summary: "Shipped 10+ production workflows and automated manual processes, achieving a 50% reduction in request handling latency.",
   },
   {
     id: "exp4",
-    title: "Teaching Assistant – Computer Architecture",
-    company: "UC San Diego",
-    period: "2024 – Present",
-    summary: "Led discussions, debugged student CPUs and taught pipeline/hazard concepts.",
+    title: "Embedded Team Member",
+    company: "TRITONS RCSC - RoboCup Soccer",
+    period: "Oct 2023 – June 2024",
+    summary: "Engineered high-precision solenoid actuation circuits and STM32-based activation systems with <20ms trigger response.",
   },
   {
     id: "exp5",
-    title: "Hardware/Firmware Project Lead – MacroPad",
-    company: "Student Project",
-    period: "2024",
-    summary: "Led a team building a custom ESP32‑based Macropad with multiple OLEDs.",
+    title: "Battery Team Member",
+    company: "TRITON SolarCar",
+    period: "Oct 2023 – June 2024",
+    summary: "Calibrated 3-phase BLDC motor controllers and integrated pedal feedback systems for optimized torque control.",
   },
 ];
 
 // Data for the full‑detail cards (keyed by id)
 export const experienceFull = {
   exp1: {
-    title: "Computer Architecture Engineer",
-    company: "ABC Technology Inc.",
-    period: "June 2023 – Present",
+    title: "CSE Department Tutor - Computer Architecture",
+    company: "UC San Diego",
+    period: "June 2025 – Present",
     details:
-      "Owned microarchitecture of multiple RISC‑V cores including pipeline depth, branch prediction and hazard/forwarding logic. Brought up RTL on FPGA prototypes, debugged timing issues and collaborated with firmware teams on bring‑up guides, documentation and performance scripts.",
+      "Spearheaded academic support for ~50 undergraduates in CSE 141/L. Architected targeted problem sets focusing on ARMv8 pipelines, hazards, caches, and memory models. \n\nLeveraged data-driven insights to co-design midterms and finals, resulting in a ~15-point average increase on Midterm 2 and a ~10% boost on Final exam scores through high-impact 1-on-1 interventions. Guided 100+ students in designing custom ISAs and single-cycle CPUs in SystemVerilog, debugging complex datapath/control logic to maximize synthesis success.",
   },
   exp2: {
-    title: "Embedded Systems Engineer",
-    company: "XYZ Robotics",
-    period: "Jul 2021 – May 2023",
+    title: "Research Intern - VLSI System Design",
+    company: "Bangalore, India",
+    period: "Oct 2024 – Nov 2024",
     details:
-      "Implemented CAN/I²C/SPI/UART drivers and real‑time sensor fusion loops. Tuned ISR latency and task scheduling, added diagnostics over UART/CAN and used oscilloscopes/logic analyzers to characterise timing. Reviewed schematics and supported board bring‑up.",
+      "Executed comprehensive profiling of CH32V RISC-V instruction execution, analyzing 50+ traces to identify and mitigate 12% stall overheads. \n\nOptimized critical assembly loops, removing redundant loads/stores to cut execution cycles by ~10%. Engineered a MacroPad proof-of-concept using VSDSquadron Mini, integrating complex display and dual-button firmware on the CH32V platform. All simulation and debugging performed in a virtualized environment.",
   },
   exp3: {
-    title: "Graduate Research Assistant",
-    company: "University of California",
-    period: "Sep 2019 – Jun 2021",
+    title: "Student Developer - Document & Case Management",
+    company: "UCSD ITS",
+    period: "Oct 2023 – June 2024",
     details:
-      "Prototyped novel coherence protocols in a cycle‑accurate simulator and evaluated them on SPEC‑like workloads. Designed teaching labs for pipelining, out‑of‑order execution and caches; mentored students on debugging RTL and simulator code.",
+      "Delivered 10+ mission-critical production workflows (Messaging Colab, Laptop Borrow Request) serving 3,000+ users. \n\nRevolutionized operational efficiency by automating manual handling, slashing processing time from 30 to 15 minutes (-50%). Architected 3+ analytical dashboards using ServiceNow’s experience builder and executed 100+ rigorous E2E tests to ensure flawless deployment of developer assets.",
   },
   exp4: {
-    title: "Teaching Assistant – Computer Architecture",
-    company: "UC San Diego",
-    period: "2024 – Present",
+    title: "Embedded Team Member",
+    company: "TRITONS RCSC - RoboCup Soccer",
+    period: "Oct 2023 – June 2024",
     details:
-      "Led weekly discussion sections, debugged student designs and created worksheets to connect lecture concepts to real RTL problems. Helped students reason about control signals, hazards and forwarding paths.",
+      "Designed and simulated advanced linear and chip kick circuits using PSpice/LTSpice, validating charge timing and energy delivery for optimal performance. \n\nBuilt and deployed STM32-based activation circuitry, guaranteeing reliable <20ms trigger response under high-stress test conditions.",
   },
   exp5: {
-    title: "Hardware/Firmware Project Lead – MacroPad",
-    company: "Student Project",
-    period: "2024",
+    title: "Battery Team Member",
+    company: "TRITON SolarCar",
+    period: "Oct 2023 – June 2024",
     details:
-      "Coordinated firmware, hardware and desktop‑app workstreams. Designed PCB layouts, wrote ESP32 firmware, low‑level display drivers and a custom serial protocol. Documented the system so others can extend it.",
+      "Configured and fine-tuned 3-phase BLDC motor controllers, meticulously calibrating pedal and throttle mapping for silky-smooth torque control. \n\nIntegrated and validated pedal feedback mechanisms with the primary drive system, ensuring stable current draw and highly responsive motor behavior.",
   },
 };
 

@@ -11,26 +11,38 @@ import fpgaImg from "../assets/fpga.png";
 export const projectsList = [
   {
     id: "proj1",
-    title: "Custom RISC‑V CPU",
-    summary: "5‑stage pipelined RISC‑V core in SystemVerilog with custom ISA extensions.",
-    thumb: cpuImg,
+    title: "MacroPad - Project Lead",
+    summary: "Led 9-person team to build a modular ESP32 MacroPad with 9 OLEDs and custom Qt companion app.",
+    thumb: smarthomeImg, // Placeholder, user said media later
   },
   {
     id: "proj2",
-    title: "ESP32 Macropad",
-    summary: "Multi‑screen ESP32‑based Macropad with custom PCB and desktop app.",
-    thumb: smarthomeImg,
+    title: "Sora v1.0 - Custom CPU",
+    summary: "Architected 9-bit ISA and single-cycle CPU in SystemVerilog; achieved double precision math on constrained datapath.",
+    thumb: cpuImg,
   },
   {
     id: "proj3",
-    title: "FPGA‑based Accelerator",
-    summary: "Hardware accelerator prototype offloading compute‑intensive kernels to an FPGA.",
-    thumb: fpgaImg,
+    title: "Nachos Operating System",
+    summary: "Implemented preemptive threading, multiprogramming, and demand-paged virtual memory in Java/MIPS.",
+    thumb: smarthomeImg,
   },
   {
     id: "proj4",
-    title: "Smart Home Controller",
-    summary: "Embedded hub talking to sensors/actuators over I²C/SPI.",
+    title: "Viterbi Encoder/Decoder",
+    summary: "Built pipelined Viterbi decoder (K=7) in SystemVerilog; verified with deterministic/random error injection.",
+    thumb: fpgaImg,
+  },
+  {
+    id: "proj5",
+    title: "Nixie Tube Clock",
+    summary: "Designed retro-style clock using 1900s vacuum tubes and CH32V RISC-V platform.",
+    thumb: smarthomeImg,
+  },
+  {
+    id: "proj6",
+    title: "Ultrasonic Smart Clock",
+    summary: "Prototyped gesture-controlled smart clock with ultrasonic sensors and CircuitPython.",
     thumb: smarthomeImg,
   },
 ];
@@ -38,27 +50,39 @@ export const projectsList = [
 // Full detail data (title, details, gallery)
 export const projectsFull = {
   proj1: {
-    title: "Custom RISC‑V CPU",
+    title: "MacroPad - Project Lead",
     details:
-      "Designed the ISA, pipeline, hazard and forwarding logic, and wrote assembly test programs. Brought the design onto an FPGA, debugged timing issues and integrated the core into a simple SoC with instruction and data memories.",
-    gallery: [cpuImg],
-  },
-  proj2: {
-    title: "ESP32 Macropad",
-    details:
-      "Designed the PCB around an ESP32‑WROVER, nine mechanical switches and multiple OLED displays. Implemented a serial protocol to transfer PNG icons from a Qt desktop app, and wrote firmware to render icons and send programmable key macros.",
+      "Led a high-velocity 9-person engineering team to design a modular ESP32 MacroPad featuring 9 64x64 RGB OLEDs, mechanical keys, and rotary encoders. \n\nEngineered a seamless desktop activation ecosystem via a custom, cross-platform Qt companion app (C++/Objective C). Implemented a high-performance serial protocol achieving profile switches in <50ms and activation latency <40ms. Designed custom driver circuits for SSD1357z controllers and integrated them into a bespoke PCB.",
     gallery: [smarthomeImg],
   },
-  proj3: {
-    title: "FPGA‑based Accelerator",
+  proj2: {
+    title: "Sora v1.0 - Self Designed ISA and CPU",
     details:
-      "Built a hardware accelerator datapath and control FSM, verified it with simulation and integrated it into a simple top‑level SoC, providing notable speedups over CPU implementations.",
-    gallery: [fpgaImg],
+      "Authored a novel 9-bit ISA (16 instructions, load-store architecture) and 8-bit datapath. \n\nAchieved Hamming Distance Calculation and double precision multiplication using only 9 bits—clocking the fastest execution in the class. Implemented single-cycle RTL in SystemVerilog, simulated in ModelSim, and resource-mapped on Cyclone-V using QuartusPrime. Wrote a custom assembler in Python to streamline development.",
+    gallery: [cpuImg],
+  },
+  proj3: {
+    title: "Nachos Operating System",
+    details:
+      "Engineered a robust OS kernel implementing preemptive threads with Alarm, join, and interrupt-based condition variables. \n\nAdded full multiprogramming capabilities with safe rVM/wVM, 16-FD file tables, and concurrent user-program execution. Designed a sophisticated demand-paged Virtual Memory system featuring lazy loading, swap space, clock eviction algorithms, dirty-bit optimization, and page pinning.",
+    gallery: [smarthomeImg],
   },
   proj4: {
-    title: "Smart Home Controller",
+    title: "Viterbi Encoder/Decoder",
     details:
-      "Implemented an RTOS‑based firmware with sensor polling, command parsing and actuator control. Added UART logging and a CLI for debugging.",
+      "Implemented a high-performance convolutional encoder (rate 1/2, K=7) and pipelined Viterbi decoder (ACS + traceback depth 35) in SystemVerilog. \n\nVerified system integrity via end-to-end tx/rx testbenches, achieving min branch metric = 0 in noise-free channels. Built robust deterministic and random error-injection frameworks to evaluate uncorrected errors across periodic/burst patterns up to a 1/16 rate. Synthesized on Cyclone V.",
+    gallery: [fpgaImg],
+  },
+  proj5: {
+    title: "Nixie Tube Clock",
+    details:
+      "Designed a vintage-aesthetic 'Nixie Clock' utilizing 1900s IN-14 vacuum tubes with 11-pin interfaces. \n\nBuilt on the VSDSquadron Mini (CH32V platform) using C++. Integrated advanced features including multi-time zone support (4 presets) and a standard alarm layout. Engineered the hardware/firmware interface for reliable tube control.",
+    gallery: [smarthomeImg],
+  },
+  proj6: {
+    title: "Ultrasonic Smart Clock",
+    details:
+      "Innovated a 'Smart Clock' leveraging ultrasonic sensors to detect user presence/sleep state for intelligent alarm control. \n\nProgrammed using CircuitPython on a Metro M0 Express. Implemented gesture-based 'Stop' and 'Snooze' functionality. Utilized Onshape for 3D modeling of the prototype enclosure and EagleCAD for precision circuit design.",
     gallery: [smarthomeImg],
   },
 };
