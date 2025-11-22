@@ -22,7 +22,7 @@ const documents = [
   },
 ];
 
-export default function Documents() {
+export default function Documents({ id }) {
   const stripRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -55,7 +55,7 @@ export default function Documents() {
   };
 
   return (
-    <section className="relative rounded-[32px] bg-slate-950/80 px-6 py-8 md:px-8 md:py-9 shadow-[0_40px_120px_rgba(15,23,42,0.8)]">
+    <section id={id} className="relative rounded-[32px] bg-slate-950/80 px-6 py-8 md:px-8 md:py-9 shadow-[0_40px_120px_rgba(15,23,42,0.8)]">
       <h2 className="text-2xl md:text-3xl font-semibold text-slate-50">
         Important Documents
       </h2>
@@ -103,9 +103,8 @@ export default function Documents() {
           {documents.map((doc, idx) => (
             <span
               key={doc.id}
-              className={`h-1.5 w-1.5 rounded-full transition-colors ${
-                idx === activeIndex ? "bg-sky-400" : "bg-slate-600/70"
-              }`}
+              className={`h-1.5 w-1.5 rounded-full transition-colors ${idx === activeIndex ? "bg-sky-400" : "bg-slate-600/70"
+                }`}
             />
           ))}
         </div>

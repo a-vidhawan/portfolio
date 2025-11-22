@@ -77,9 +77,17 @@ function Navbar() {
     ? "text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors text-right"
     : "text-sm font-medium text-slate-200 hover:text-sky-400 transition-colors shadow-black drop-shadow-md";
 
+  // Determine current section label
+  const getSectionLabel = () => {
+    if (location.pathname === '/experience') return 'Professional';
+    if (location.pathname === '/projects') return 'Projects';
+    if (location.pathname === '/research') return 'Research';
+    return 'Home';
+  };
+
   return (
     <nav className={navClasses}>
-      <div className={scrolled ? "" : "max-w-7xl mx-auto w-full flex justify-between items-center px-4"}>
+      <div className={scrolled ? "flex justify-end items-center px-4" : "max-w-7xl mx-auto w-full flex justify-between items-center px-4"}>
         {/* Back Button for non-home pages */}
         {!isHome && (
           <button
@@ -91,11 +99,12 @@ function Navbar() {
           </button>
         )}
 
-        {/* Spacer for when back button is hidden or on home page to keep alignment if needed */}
-        {/* But since we use justify-end in ulClasses for non-scrolled, we might not need it if we structure correctly.
-            Let's keep it simple. If scrolled, the nav is just the floating pill on the right.
-            If not scrolled, it's a full width bar.
-        */}
+        {/* Scrolled Label */}
+        {scrolled && (
+          <span className="mr-4 text-sm font-bold text-slate-400 uppercase tracking-wider backdrop-blur-sm bg-slate-950/30 px-3 py-1 rounded-full border border-slate-800/50">
+            {getSectionLabel()}
+          </span>
+        )}
 
         <ul className={ulClasses}>
           {/* If scrolled and not home, show a mini back button in the list? 
