@@ -23,7 +23,7 @@ function Hero({ id }) {
           Aarav Vidhawan
         </h1>
         <p className="text-xl md:text-2xl text-sky-300/90 font-light">
-          Computer Engineer — Architecture &amp; Embedded Systems
+          Computer Architecture &amp; Embedded Systems
         </p>
         <p className="text-base md:text-lg text-slate-300/80 max-w-2xl mx-auto leading-relaxed">
           I build at the boundary between hardware and software: custom ISAs,
