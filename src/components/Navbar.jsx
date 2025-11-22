@@ -99,14 +99,16 @@ function Navbar() {
           </button>
         )}
 
-        {/* Scrolled Label */}
-        {scrolled && (
-          <span className="mr-4 text-sm font-bold text-slate-400 uppercase tracking-wider backdrop-blur-sm bg-slate-950/30 px-3 py-1 rounded-full border border-slate-800/50">
-            {getSectionLabel()}
-          </span>
-        )}
-
         <ul className={ulClasses}>
+          {/* Section Label when scrolled */}
+          {scrolled && (
+            <li className="w-full text-right pb-2 mb-2 border-b border-gray-200/50">
+              <span className="text-xs font-extrabold text-slate-500 uppercase tracking-widest">
+                {getSectionLabel()}
+              </span>
+            </li>
+          )}
+
           {/* If scrolled and not home, show a mini back button in the list? 
                Or maybe keep the back button separate? 
                User asked for "a button on the top left oft he screen to go backl too".
