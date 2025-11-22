@@ -62,77 +62,104 @@ function About() {
   };
 
   return (
-    <div className="bg-slate-950/80 border border-slate-800/70 rounded-3xl p-8 md:p-10 backdrop-blur overflow-hidden">
+    <div className="relative overflow-hidden py-8">
       {/* ABOUT VIEW */}
       <div
-        className={`transition-opacity duration-300 ${
-          showSkills
+        className={`transition-opacity duration-300 ${showSkills
             ? 'opacity-0 pointer-events-none absolute'
             : 'opacity-100 relative'
-        }`}
+          }`}
       >
-        <div className="grid md:grid-cols-3 gap-8 items-start">
-          {/* About text */}
-          <div className="md:col-span-2 space-y-4">
-            <h2 className="text-2xl md:text-3xl font-semibold text-slate-50">
-              About Me
-            </h2>
-            <p className="text-sm md:text-base text-slate-300/90">
-              I&apos;m a computer architecture and embedded systems engineer who
-              likes thinking about systems from the ISA down to timing diagrams
-              and then back up to firmware and tools. I enjoy designing custom
-              processors, debugging weird FPGA timing issues, and building the
-              firmware that makes hardware feel effortless to use.
-            </p>
-            <p className="text-sm md:text-base text-slate-300/90">
-              Recently I&apos;ve been splitting time between tutoring computer
-              architecture, leading a Macropad project and digital logic labs,
-              and exploring RISC-V microcontrollers and SoC-style designs.
-            </p>
+        <div className="grid md:grid-cols-12 gap-10 items-start">
+          {/* Left: Photo (moved from Hero) */}
+          <div className="md:col-span-4 lg:col-span-4">
+            <div className="aspect-[3/4] rounded-2xl border border-slate-800 bg-slate-950/50 flex items-center justify-center text-slate-500 text-xs tracking-wide overflow-hidden relative group">
+              {/* Placeholder for photo */}
+              <div className="absolute inset-0 bg-gradient-to-b from-slate-800/20 to-slate-950/80" />
+              <span className="px-4 text-center relative z-10">
+                [Photo Placeholder]
+              </span>
+            </div>
           </div>
 
-          {/* compact skills summary */}
-          <div className="md:col-span-1">
-            <div className="relative bg-slate-900/70 border border-slate-700/70 rounded-2xl p-4 space-y-3">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-slate-100">
-                  Core Skills
-                </h3>
-                <button
-                  type="button"
-                  onClick={() => setShowSkills(true)}
-                  className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-sky-500/70 text-sky-300 text-sm hover:bg-sky-500/10 transition"
-                  aria-label="Expand full skills"
-                >
-                  +
-                </button>
+          {/* Right: Content */}
+          <div className="md:col-span-8 lg:col-span-8 space-y-8">
+
+            {/* Header & Bio */}
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-50">
+                Hello, I'm Aarav
+              </h2>
+              <div className="space-y-4 text-slate-300/90 leading-relaxed text-base md:text-lg">
+                <p>
+                  I&apos;m a computer architecture and embedded systems engineer who
+                  likes thinking about systems from the ISA down to timing diagrams
+                  and then back up to firmware and tools.
+                </p>
+                <p>
+                  I enjoy designing custom processors, debugging weird FPGA timing issues,
+                  and building the firmware that makes hardware feel effortless to use.
+                  Recently I&apos;ve been splitting time between tutoring computer
+                  architecture, leading a Macropad project, and exploring RISC-V SoCs.
+                </p>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {topSkills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="text-[11px] px-2.5 py-1 rounded-full bg-sky-900/40 text-sky-100 border border-sky-700/50"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-              <p className="text-[11px] text-slate-400">
-                Tap the <span className="font-semibold text-sky-300">+</span> to
-                see the full skill map.
-              </p>
             </div>
+
+            {/* Info Grid (Education & Skills) */}
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* Education Box */}
+              <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-2 hover:border-slate-700 transition-colors">
+                <p className="text-xs uppercase tracking-wider text-sky-400 font-semibold">
+                  Education
+                </p>
+                <h3 className="text-lg font-semibold text-slate-100">
+                  B.S. Computer Engineering
+                </h3>
+                <p className="text-slate-400 text-sm">
+                  UC San Diego
+                </p>
+              </div>
+
+              {/* Skills Box (Trigger) */}
+              <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-3 hover:border-sky-500/30 transition-colors group relative">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs uppercase tracking-wider text-sky-400 font-semibold">
+                    Core Skills
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setShowSkills(true)}
+                    className="text-sky-400 hover:text-sky-300 text-xs font-medium flex items-center gap-1"
+                  >
+                    View Map <span className="text-lg leading-none">&rarr;</span>
+                  </button>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {topSkills.slice(0, 4).map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-[11px] px-2 py-0.5 rounded bg-slate-800/50 text-slate-300 border border-slate-700/50"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                  <span className="text-[11px] px-2 py-0.5 text-slate-500">
+                    + more...
+                  </span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
       {/* SKILL MAP VIEW */}
       <div
-        className={`transform-gpu origin-top-right transition-all duration-300 ${
-          showSkills
-            ? 'opacity-100 scale-100 relative'
-            : 'opacity-0 scale-95 pointer-events-none absolute'
-        }`}
+        className={`transform-gpu origin-top-right transition-all duration-300 ${showSkills
+          ? 'opacity-100 scale-100 relative'
+          : 'opacity-0 scale-95 pointer-events-none absolute'
+          }`}
       >
         <div className="flex items-center justify-between mb-4 md:mb-6">
           <div>

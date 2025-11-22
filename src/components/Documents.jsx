@@ -55,7 +55,7 @@ export default function Documents({ id }) {
   };
 
   return (
-    <section id={id} className="relative rounded-[32px] bg-slate-950/80 px-6 py-8 md:px-8 md:py-9 shadow-[0_40px_120px_rgba(15,23,42,0.8)]">
+    <section id={id} className="relative py-8">
       <h2 className="text-2xl md:text-3xl font-semibold text-slate-50">
         Important Documents
       </h2>

@@ -131,7 +131,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative rounded-[32px] border border-slate-800/70 bg-slate-950/80 px-6 py-8 md:px-8 md:py-9 shadow-[0_40px_120px_rgba(15,23,42,0.8)] overflow-hidden transition-all duration-500"
+      className="relative overflow-hidden transition-all duration-500 py-8"
     >
       {/* LIST VIEW */}
       <div

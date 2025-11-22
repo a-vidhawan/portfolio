@@ -66,11 +66,11 @@ function Navbar() {
 
   // Dynamic classes
   const navClasses = scrolled
-    ? "fixed top-4 right-4 z-50 transition-all duration-300"
+    ? "fixed top-0 left-0 w-full z-50 transition-all duration-300 pointer-events-none"
     : "fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent";
 
   const ulClasses = scrolled
-    ? "flex flex-col gap-2 p-3 bg-white/80 backdrop-blur-md rounded shadow-lg items-end"
+    ? "flex flex-col gap-2 p-3 bg-white/80 backdrop-blur-md rounded shadow-lg items-end pointer-events-auto"
     : "flex flex-row gap-6 p-6 justify-end items-center bg-gradient-to-b from-slate-950/80 to-transparent";
 
   const linkClasses = scrolled
@@ -87,17 +87,24 @@ function Navbar() {
 
   return (
     <nav className={navClasses}>
-      <div className={scrolled ? "flex justify-end items-center px-4" : "max-w-7xl mx-auto w-full flex justify-between items-center px-4"}>
+      <div className={scrolled ? "flex justify-between items-start px-4 pt-4" : "max-w-7xl mx-auto w-full flex justify-between items-center px-4"}>
         {/* Back Button for non-home pages */}
-        {!isHome && (
-          <button
-            onClick={() => navigate('/')}
-            className={`${scrolled ? "hidden" : "flex items-center gap-2 text-slate-200 hover:text-sky-400 transition-colors"}`}
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span className="font-medium">Back to Home</span>
-          </button>
-        )}
+        <div className="pointer-events-auto">
+          {!isHome && (
+            <button
+              onClick={() => navigate('/')}
+              className={
+                scrolled
+                  ? "flex items-center justify-center w-10 h-10 rounded-full bg-white/80 backdrop-blur-md shadow-lg text-slate-600 hover:text-sky-500 transition-all hover:scale-105"
+                  : "flex items-center gap-2 text-slate-200 hover:text-sky-400 transition-colors"
+              }
+              aria-label="Back to Home"
+            >
+              <ArrowLeft className={scrolled ? "w-5 h-5" : "w-5 h-5"} />
+              {!scrolled && <span className="font-medium">Back to Home</span>}
+            </button>
+          )}
+        </div>
 
         <ul className={ulClasses}>
           {/* Section Label when scrolled */}
@@ -106,25 +113,6 @@ function Navbar() {
               <span className="text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                 {getSectionLabel()}
               </span>
-            </li>
-          )}
-
-          {/* If scrolled and not home, show a mini back button in the list? 
-               Or maybe keep the back button separate? 
-               User asked for "a button on the top left oft he screen to go backl too".
-               So the back button logic above handles the top-left requirement when at top.
-               When scrolled, the user said "collapses into what it is now". 
-               "What it is now" is just the list. 
-               So maybe we add a "Home" link to the list when scrolled on non-home pages?
-           */}
-          {!isHome && scrolled && (
-            <li>
-              <button
-                onClick={() => navigate('/')}
-                className={linkClasses}
-              >
-                ← Home
-              </button>
             </li>
           )}
 
