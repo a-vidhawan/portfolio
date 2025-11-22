@@ -16,8 +16,11 @@ function Hero() {
     <div className="relative flex flex-col items-center justify-center min-h-screen py-20 md:py-32 text-center">
       {/* Text Content */}
       <div className="max-w-3xl space-y-6">
+        <p className="text-sm md:text-base uppercase tracking-[0.35em] text-sky-400 font-medium">
+          Hello, I'm
+        </p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-50 tracking-tight">
-          Hello, I'm Aarav Vidhawan
+          Aarav Vidhawan
         </h1>
         <p className="text-xl md:text-2xl text-sky-300/90 font-light">
           Computer Engineer — Architecture &amp; Embedded Systems

@@ -1,5 +1,6 @@
 // src/components/About.jsx
 import React, { useState } from 'react';
+import { Plus } from 'lucide-react';
 
 /**
  * About section with toggleable Skill Map.
@@ -129,9 +130,10 @@ function About() {
                   <button
                     type="button"
                     onClick={() => setShowSkills(true)}
-                    className="text-sky-400 hover:text-sky-300 text-xs font-medium flex items-center gap-1"
+                    className="w-8 h-8 rounded-full border border-slate-600 text-slate-300 flex items-center justify-center hover:bg-sky-500/20 hover:border-sky-500/50 hover:text-sky-400 transition-all"
+                    aria-label="View Skills"
                   >
-                    View Map <span className="text-lg leading-none">&rarr;</span>
+                    <Plus className="w-5 h-5" />
                   </button>
                 </div>
                 <div className="flex flex-wrap gap-2">
