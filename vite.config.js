@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
 // here to customise the build or dev server.
 export default defineConfig({
   plugins: [react()],
+  base: "/portfolio/",
   server: {
     port: 5173,
   },
