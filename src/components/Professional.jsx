@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { ArrowUpRight, Minus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Data for the mini cards in the professional list
 export const experienceList = [
@@ -82,6 +83,7 @@ export const experienceFull = {
 export default function Professional() {
   const [expandedId, setExpandedId] = useState(null);
   const listRef = useRef(null);
+  const navigate = useNavigate();
 
   // Lock vertical scroll to the card list when hovering
   const handleWheel = (e) => {
@@ -114,7 +116,7 @@ export default function Professional() {
           </div>
           <button
             className="group border border-slate-600 rounded-lg p-1.5 transition hover:border-sky-500"
-            onClick={() => (window.location.href = "/experience")}
+            onClick={() => navigate("/experience")}
             aria-label="View all experience"
           >
             <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-sky-400" />

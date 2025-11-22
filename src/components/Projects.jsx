@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ArrowUpRight, Minus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Images for thumbnails (replace with your own files in /assets)
 import cpuImg from "../assets/cpu.png";
@@ -64,6 +65,7 @@ export const projectsFull = {
 
 export default function Projects() {
   const [expandedId, setExpandedId] = useState(null);
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
   const stripRef = useRef(null);
   const galleryRef = useRef(null);
@@ -125,7 +127,7 @@ export default function Projects() {
           </div>
           <button
             className="group border border-slate-600 rounded-lg p-1.5 transition hover:border-sky-500"
-            onClick={() => (window.location.href = "/projects")}
+            onClick={() => navigate("/projects")}
             aria-label="View all projects"
           >
             <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-sky-400" />

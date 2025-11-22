@@ -1,6 +1,7 @@
 // src/components/Research.jsx
 import React, { useState } from "react";
 import { ArrowUpRight, Minus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const researchItems = [
   {
@@ -20,6 +21,7 @@ export const researchFull = {
 
 export default function Research() {
   const [expandedId, setExpandedId] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <section
@@ -44,7 +46,7 @@ export default function Research() {
           </div>
           <button
             className="group border border-slate-600 rounded-lg p-1.5 transition hover:border-sky-500"
-            onClick={() => (window.location.href = "/research")}
+            onClick={() => navigate("/research")}
             aria-label="View all research"
           >
             <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-sky-400" />
