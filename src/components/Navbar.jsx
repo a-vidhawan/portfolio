@@ -88,28 +88,35 @@ function Navbar() {
   return (
     <nav className={navClasses}>
       <div className={scrolled ? "flex justify-between items-start px-4 pt-4" : "max-w-7xl mx-auto w-full flex justify-between items-center px-4"}>
-        {/* Back Button for non-home pages */}
+        {/* Back Button for non-home pages (only when NOT scrolled) */}
         <div className="pointer-events-auto">
-          {!isHome && (
+          {!isHome && !scrolled && (
             <button
               onClick={() => navigate('/')}
-              className={
-                scrolled
-                  ? "flex items-center justify-center w-10 h-10 rounded-full bg-white/80 backdrop-blur-md shadow-lg text-slate-600 hover:text-sky-500 transition-all hover:scale-105"
-                  : "flex items-center gap-2 text-slate-200 hover:text-sky-400 transition-colors"
-              }
+              className="flex items-center gap-2 text-slate-200 hover:text-sky-400 transition-colors"
               aria-label="Back to Home"
             >
-              <ArrowLeft className={scrolled ? "w-5 h-5" : "w-5 h-5"} />
-              {!scrolled && <span className="font-medium">Back to Home</span>}
+              <ArrowLeft className="w-5 h-5" />
+              <span className="font-medium">Back to Home</span>
             </button>
           )}
         </div>
 
         <ul className={ulClasses}>
-          {/* Section Label when scrolled */}
+          {/* Section Header with Back Button when scrolled */}
           {scrolled && (
-            <li className="w-full text-right pb-2 mb-2 border-b border-gray-200/50">
+            <li className="w-full flex items-center justify-between pb-2 mb-2 border-b border-gray-200/50">
+              {!isHome ? (
+                <button
+                  onClick={() => navigate('/')}
+                  className="p-1.5 rounded-full text-slate-400 hover:text-sky-500 hover:bg-slate-100 transition-all"
+                  aria-label="Back to Home"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                </button>
+              ) : (
+                <span />
+              )}
               <span className="text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                 {getSectionLabel()}
               </span>

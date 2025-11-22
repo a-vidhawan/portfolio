@@ -1,20 +1,23 @@
 import React from 'react';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 
 /**
- * Hero section with tall portrait on the left and text on the right.
- * "UC San Diego" replaces the generic "Portfolio" label.
+ * Hero section - Full-screen landing page with centered text and social links.
  */
 function Hero() {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="relative flex flex-col items-center justify-center py-20 md:py-32 text-center">
+    <div className="relative flex flex-col items-center justify-center min-h-screen py-20 md:py-32 text-center">
       {/* Text Content */}
       <div className="max-w-3xl space-y-6">
-        <p className="text-sm md:text-base uppercase tracking-[0.35em] text-sky-400 font-medium">
-          Hi, I&apos;m
-        </p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-50 tracking-tight">
-          Aarav Vidhawan
+          Hello, I'm Aarav Vidhawan
         </h1>
         <p className="text-xl md:text-2xl text-sky-300/90 font-light">
           Computer Engineer — Architecture &amp; Embedded Systems
@@ -26,7 +29,7 @@ function Hero() {
         </p>
 
         {/* Social Links */}
-        <div className="flex items-center justify-center gap-6 pt-6">
+        <div className="flex items-center justify-center gap-4 pt-6">
           <a
             href="https://github.com/a-vidhawan"
             target="_blank"
@@ -45,6 +48,24 @@ function Hero() {
             <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
             LinkedIn
           </a>
+          <a
+            href="mailto:avidhawan@ucsd.edu"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-700/50 bg-slate-900/50 text-slate-300 text-sm font-medium hover:border-sky-500/50 hover:text-sky-400 hover:bg-slate-800/80 transition-all group"
+          >
+            <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            Email
+          </a>
+        </div>
+
+        {/* Learn More Button */}
+        <div className="pt-8">
+          <button
+            onClick={scrollToAbout}
+            className="flex items-center gap-2 mx-auto px-6 py-3 rounded-full border border-slate-700/50 bg-slate-900/50 text-slate-300 text-sm font-medium hover:border-sky-500/50 hover:text-sky-400 hover:bg-slate-800/80 transition-all group"
+          >
+            Learn More
+            <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+          </button>
         </div>
       </div>
     </div>
@@ -52,3 +73,4 @@ function Hero() {
 }
 
 export default Hero;
+
