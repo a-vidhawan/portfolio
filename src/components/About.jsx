@@ -62,12 +62,12 @@ function About() {
   };
 
   return (
-    <div className="relative overflow-hidden py-8">
+    <div className="relative bg-slate-950/80 border border-slate-800/70 rounded-3xl p-8 md:p-10 backdrop-blur overflow-hidden">
       {/* ABOUT VIEW */}
       <div
         className={`transition-opacity duration-300 ${showSkills
-            ? 'opacity-0 pointer-events-none absolute'
-            : 'opacity-100 relative'
+          ? 'opacity-0 pointer-events-none absolute'
+          : 'opacity-100 relative'
           }`}
       >
         <div className="grid md:grid-cols-12 gap-10 items-start">

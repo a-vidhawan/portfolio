@@ -11,7 +11,7 @@ function Hero() {
       {/* Text Content */}
       <div className="max-w-3xl space-y-6">
         <p className="text-sm md:text-base uppercase tracking-[0.35em] text-sky-400 font-medium">
-          UC San Diego
+          Hi, I&apos;m
         </p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-50 tracking-tight">
           Aarav Vidhawan

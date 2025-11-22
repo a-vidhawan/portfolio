@@ -79,3 +79,30 @@
     opacity: 0;
   }
 }
+
+/* Custom Scrollbar - Floating Blob */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.4); /* slate-400/40 */
+  border-radius: 9999px;
+  border: 2px solid transparent; /* Creates padding effect if background-clip is used, but here we just want a thin blob */
+  background-clip: content-box; /* Optional: makes it look even smaller inside the track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.6);
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}

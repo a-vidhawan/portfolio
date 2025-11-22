@@ -161,7 +161,7 @@ export default function Projects() {
         <div className="relative">
           <div
             ref={stripRef}
-            className="flex gap-5 overflow-x-auto pb-3 pr-1 scroll-smooth snap-x snap-mandatory"
+            className="flex gap-5 overflow-x-auto pb-3 pr-1 scroll-smooth snap-x snap-mandatory custom-scrollbar"
             onWheel={handleStripWheel}
             style={{ overscrollBehaviorX: "contain" }}
           >
@@ -239,7 +239,7 @@ export default function Projects() {
                 <p className="text-xs text-slate-400 mb-2">Project Media</p>
                 <div
                   ref={galleryRef}
-                  className="flex gap-4 overflow-x-auto pb-2 scroll-smooth"
+                  className="flex gap-4 overflow-x-auto pb-2 scroll-smooth custom-scrollbar"
                   onWheel={handleGalleryWheel}
                   style={{ overscrollBehaviorX: "contain" }}
                 >

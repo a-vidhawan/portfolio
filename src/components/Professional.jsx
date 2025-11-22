@@ -96,16 +96,16 @@ export default function Professional() {
   return (
     <section
       id="professional"
-      className="relative overflow-hidden transition-all duration-500 py-8"
+      className="relative rounded-[32px] border border-slate-800/70 bg-slate-950/80 px-6 py-8 md:px-8 md:py-9 shadow-[0_40px_120px_rgba(15,23,42,0.8)] overflow-hidden transition-all duration-500"
     >
-      {/* LIST VIEW */}
+      {/* LIST VIEW (TIMELINE) */}
       <div
         className={`transition-all duration-500 ease-in-out ${expandedId
           ? "opacity-0 translate-x-[-20px] pointer-events-none absolute inset-0 p-6 md:p-8"
           : "opacity-100 translate-x-0 relative"
           }`}
       >
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-8">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-slate-500">
               Career Timeline
@@ -126,32 +126,42 @@ export default function Professional() {
         <div
           ref={listRef}
           onWheel={handleWheel}
-          className="max-h-[420px] overflow-y-auto space-y-4 pr-2 scroll-smooth"
+          className="max-h-[420px] overflow-y-auto pr-2 scroll-smooth relative pl-4 custom-scrollbar"
           style={{ overscrollBehaviorY: "contain" }}
         >
-          {experienceList.map((item) => (
-            <div
-              key={item.id}
-              className="rounded-2xl bg-slate-900/85 border border-slate-700/60 hover:border-sky-500/60 transition p-5 cursor-pointer group"
-              onClick={() => setExpandedId(item.id)}
-            >
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-base font-semibold text-slate-50 group-hover:text-sky-300 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-slate-400">{item.company}</p>
-                  <p className="text-xs text-slate-500 mt-1">{item.period}</p>
+          {/* Vertical Line */}
+          <div className="absolute left-[27px] top-2 bottom-0 w-px bg-slate-800" />
+
+          <div className="space-y-8 relative">
+            {experienceList.map((item) => (
+              <div
+                key={item.id}
+                className="relative pl-12 group cursor-pointer"
+                onClick={() => setExpandedId(item.id)}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-[21px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-950 group-hover:border-sky-500 group-hover:bg-sky-500/20 transition-colors z-10" />
+
+                {/* Content Card */}
+                <div className="rounded-xl bg-slate-900/40 border border-slate-800/60 p-4 hover:border-sky-500/30 hover:bg-slate-900/60 transition-all">
+                  <div className="flex items-start justify-between mb-1">
+                    <div>
+                      <h3 className="text-base font-semibold text-slate-100 group-hover:text-sky-300 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-sky-400/80 font-medium">{item.company}</p>
+                    </div>
+                    <span className="text-xs text-slate-500 font-mono bg-slate-950/50 px-2 py-1 rounded border border-slate-800">
+                      {item.period}
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-400 line-clamp-2">
+                    {item.summary}
+                  </p>
                 </div>
-                <button
-                  className="w-7 h-7 rounded-full border border-slate-600 text-slate-200 group-hover:bg-sky-500/20 group-hover:border-sky-500/50 transition flex items-center justify-center"
-                >
-                  +
-                </button>
               </div>
-              <p className="mt-3 text-sm text-slate-300/90">{item.summary}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
