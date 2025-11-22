@@ -10,7 +10,7 @@ import { Plus } from 'lucide-react';
  * - Because both views live inside the same card, sections below
  *   naturally slide down/up (no overlay collision).
  */
-function About() {
+function About({ id }) {
   const [showSkills, setShowSkills] = useState(false);
 
   const topSkills = [
@@ -63,7 +63,7 @@ function About() {
   };
 
   return (
-    <div className="relative bg-slate-950/80 border border-slate-800/70 rounded-3xl p-8 md:p-10 backdrop-blur overflow-hidden">
+    <div id={id} className="relative bg-slate-950/80 border border-slate-800/70 rounded-3xl p-8 md:p-10 backdrop-blur overflow-hidden">
       {/* ABOUT VIEW */}
       <div
         className={`transition-opacity duration-300 ${showSkills

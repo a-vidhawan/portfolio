@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 /**
  * Hero section - Full-screen landing page with centered text and social links.
  */
-function Hero() {
+function Hero({ id }) {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -13,7 +13,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen py-20 md:py-32 text-center">
+    <div id={id} className="relative flex flex-col items-center justify-center min-h-screen py-20 md:py-32 text-center">
       {/* Text Content */}
       <div className="max-w-3xl space-y-6">
         <p className="text-sm md:text-base uppercase tracking-[0.35em] text-sky-400 font-medium">
