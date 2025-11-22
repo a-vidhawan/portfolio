@@ -12,7 +12,7 @@ import ResearchPage from "./pages/ResearchPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="text-slate-100 relative">
         <PCBBackground />
         <Navbar />
