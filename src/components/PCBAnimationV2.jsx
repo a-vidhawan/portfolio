@@ -47,15 +47,15 @@ function PCBAnimationV2() {
 
         // TOP (connects to y=46)
         "M92 46 V30 H60 V10 H-5",
-        "M96 46 V20 H96 V-5",
-        "M100 46 V20 H100 V-5",
-        "M104 46 V30 H130 V10 H195",
+        "M96 46 V20 H93 V-5",
+        "M100 46 V20 H103 V-5",
+        "M103 46 V30 H130 V10 H195",
 
         // BOTTOM (connects to y=62)
         "M92 62 V80 H60 V100 H-5",
-        "M96 62 V90 H96 V115",
-        "M100 62 V90 H100 V115",
-        "M104 62 V80 H130 V100 H195",
+        "M96 62 V90 H93 V115",
+        "M100 62 V90 H103 V115",
+        "M103 62 V80 H130 V100 H195",
 
         // --- LONG SNAKING TRACES (Manhattan Style) ---
 
@@ -111,17 +111,17 @@ function PCBAnimationV2() {
         "M187 78 H172 V68 H187",
         "M152 88 V68 H137",
 
-        // Mid-Vertical Buses
-        "M75 -5 V40",
-        "M117 -5 V40",
-        "M75 115 V68",
-        "M117 115 V68",
+        // Mid-Vertical Buses (end exactly at CPU top/bottom edges)
+        "M75 -5 V46",
+        "M117 -5 V46",
+        "M75 115 V62",
+        "M117 115 V62",
 
-        // CPU Surround
-        "M82 40 H110",
-        "M82 68 H110",
-        "M82 40 V68",
-        "M110 40 V68",
+        // CPU Surround (aligned to CPU bounds: x 88-104, y 46-62)
+        "M88 46 H104",
+        "M88 62 H104",
+        "M88 46 V62",
+        "M104 46 V62",
     ];
 
     return (

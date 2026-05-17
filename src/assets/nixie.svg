@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:gn="http://www.goodnotes.com/gn-svg" width="520" height="260" viewBox="0 0 520 260">
+  <rect width="520" height="260" fill="#08040a"/>
+  <rect x="20" y="20" width="480" height="220" rx="10" fill="#0d080f" stroke="#2a1a10" stroke-width="1.5"/>
+  <rect x="30" y="28" width="460" height="4" rx="2" fill="#1a0e08"/>
+  <rect x="30" y="228" width="460" height="4" rx="2" fill="#1a0e08"/>
+  <rect x="170" y="208" width="180" height="22" rx="4" fill="#12090a" stroke="#3a1a08" stroke-width="1"/>
+  <text x="260" y="223" text-anchor="middle" fill="#cc6600" font-size="9" font-family="monospace" font-weight="bold">NIXIE CLOCK  |  IN-14  |  CH32V</text>
+  <rect x="58" y="50" width="72" height="155" rx="8" fill="#100c06" stroke="#3d2010" stroke-width="1.5"/>
+  <rect x="64" y="56" width="60" height="120" rx="5" fill="#0c0804" stroke="#2a1508" stroke-width="1"/>
+  <rect x="68" y="60" width="52" height="112" rx="4" fill="#ff6600" opacity="0.04"/>
+  <rect x="70" y="62" width="48" height="108" rx="3" fill="#ff7722" opacity="0.06"/>
+  <rect x="83" y="68" width="6" height="78" rx="2" fill="#ff8833"/>
+  <rect x="80" y="68" width="12" height="8" rx="2" fill="#ff8833"/>
+  <line x1="86" y1="50" x2="86" y2="56" stroke="#cc5500" stroke-width="1.5"/>
+  <line x1="70" y1="176" x2="70" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="78" y1="176" x2="78" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="86" y1="176" x2="86" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="94" y1="176" x2="94" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="102" y1="176" x2="102" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="110" y1="176" x2="110" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <rect x="152" y="50" width="72" height="155" rx="8" fill="#100c06" stroke="#3d2010" stroke-width="1.5"/>
+  <rect x="158" y="56" width="60" height="120" rx="5" fill="#0c0804" stroke="#2a1508" stroke-width="1"/>
+  <rect x="162" y="60" width="52" height="112" rx="4" fill="#ff6600" opacity="0.04"/>
+  <rect x="164" y="62" width="48" height="108" rx="3" fill="#ff7722" opacity="0.07"/>
+  <rect x="168" y="68" width="28" height="8" rx="2" fill="#ff8833"/>
+  <rect x="192" y="68" width="6" height="40" rx="2" fill="#ff8833"/>
+  <rect x="168" y="104" width="28" height="8" rx="2" fill="#ff8833"/>
+  <rect x="168" y="108" width="6" height="38" rx="2" fill="#ff8833"/>
+  <rect x="168" y="140" width="28" height="8" rx="2" fill="#ff8833"/>
+  <line x1="188" y1="50" x2="188" y2="56" stroke="#cc5500" stroke-width="1.5"/>
+  <line x1="164" y1="176" x2="164" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="172" y1="176" x2="172" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="180" y1="176" x2="180" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="188" y1="176" x2="188" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="196" y1="176" x2="196" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="204" y1="176" x2="204" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <circle cx="247" cy="100" r="5" fill="#ff8833" opacity="0.8"/>
+  <circle cx="247" cy="120" r="5" fill="#ff8833" opacity="0.8"/>
+  <rect x="258" y="50" width="72" height="155" rx="8" fill="#100c06" stroke="#3d2010" stroke-width="1.5"/>
+  <rect x="264" y="56" width="60" height="120" rx="5" fill="#0c0804" stroke="#2a1508" stroke-width="1"/>
+  <rect x="268" y="60" width="52" height="112" rx="4" fill="#ff6600" opacity="0.04"/>
+  <rect x="270" y="62" width="48" height="108" rx="3" fill="#ff7722" opacity="0.06"/>
+  <rect x="272" y="68" width="30" height="8" rx="2" fill="#ff8833"/>
+  <rect x="298" y="68" width="6" height="44" rx="2" fill="#ff8833"/>
+  <rect x="272" y="108" width="30" height="8" rx="2" fill="#ff8833"/>
+  <rect x="298" y="112" width="6" height="38" rx="2" fill="#ff8833"/>
+  <rect x="272" y="144" width="30" height="8" rx="2" fill="#ff8833"/>
+  <line x1="294" y1="50" x2="294" y2="56" stroke="#cc5500" stroke-width="1.5"/>
+  <line x1="270" y1="176" x2="270" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="278" y1="176" x2="278" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="286" y1="176" x2="286" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="294" y1="176" x2="294" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="302" y1="176" x2="302" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="310" y1="176" x2="310" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <rect x="352" y="50" width="72" height="155" rx="8" fill="#100c06" stroke="#3d2010" stroke-width="1.5"/>
+  <rect x="358" y="56" width="60" height="120" rx="5" fill="#0c0804" stroke="#2a1508" stroke-width="1"/>
+  <rect x="362" y="60" width="52" height="112" rx="4" fill="#ff6600" opacity="0.04"/>
+  <rect x="364" y="62" width="48" height="108" rx="3" fill="#ff7722" opacity="0.08"/>
+  <rect x="366" y="68" width="32" height="8" rx="2" fill="#ff8833"/>
+  <rect x="364" y="68" width="8" height="86" rx="2" fill="#ff8833"/>
+  <rect x="392" y="68" width="8" height="86" rx="2" fill="#ff8833"/>
+  <rect x="366" y="146" width="32" height="8" rx="2" fill="#ff8833"/>
+  <line x1="388" y1="50" x2="388" y2="56" stroke="#cc5500" stroke-width="1.5"/>
+  <line x1="364" y1="176" x2="364" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="372" y1="176" x2="372" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="380" y1="176" x2="380" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="388" y1="176" x2="388" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="396" y1="176" x2="396" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <line x1="404" y1="176" x2="404" y2="198" stroke="#2a1508" stroke-width="1"/>
+  <rect x="440" y="80" width="52" height="62" rx="5" fill="#0d0f18" stroke="#1e2a3a" stroke-width="1"/>
+  <text x="466" y="103" text-anchor="middle" fill="#38bdf8" font-size="7" font-family="monospace">CH32V</text>
+  <text x="466" y="114" text-anchor="middle" fill="#64748b" font-size="6" font-family="monospace">RISC-V</text>
+  <text x="466" y="126" text-anchor="middle" fill="#64748b" font-size="6" font-family="monospace">VSDsq</text>
+  <circle cx="444" cy="165" r="6" fill="#1a0e08" stroke="#3d2010" stroke-width="1"/>
+  <circle cx="458" cy="165" r="6" fill="#1a0e08" stroke="#3d2010" stroke-width="1"/>
+  <circle cx="472" cy="165" r="6" fill="#1a0e08" stroke="#3d2010" stroke-width="1"/>
+  <circle cx="486" cy="165" r="6" fill="#1a0e08" stroke="#3d2010" stroke-width="1"/>
+  <text x="466" y="185" text-anchor="middle" fill="#cc4400" font-size="6" font-family="monospace">TZ x4</text>
+</svg>

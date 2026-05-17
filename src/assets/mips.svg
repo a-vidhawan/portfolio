@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:gn="http://www.goodnotes.com/gn-svg" width="520" height="260" viewBox="0 0 520 260">
+  <rect width="520" height="260" fill="#050816"/>
+  <text x="260" y="22" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace" font-weight="bold" opacity="0.9">MIPS CPU — Out-of-Order Engine</text>
+  <rect x="20" y="90" width="76" height="50" rx="6" fill="#0d1f35" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="58" y="111" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace" font-weight="bold">IF</text>
+  <text x="58" y="124" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Fetch</text>
+  <line x1="96" y1="115" x2="110" y2="115" stroke="#38bdf8" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="110,111 118,115 110,119" fill="#38bdf8" opacity="0.7"/>
+  <rect x="118" y="90" width="76" height="50" rx="6" fill="#0d1f35" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="156" y="111" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace" font-weight="bold">ID</text>
+  <text x="156" y="124" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Decode</text>
+  <line x1="194" y1="115" x2="208" y2="115" stroke="#38bdf8" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="208,111 216,115 208,119" fill="#38bdf8" opacity="0.7"/>
+  <rect x="216" y="90" width="76" height="50" rx="6" fill="#0d1f35" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="254" y="111" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace" font-weight="bold">EX</text>
+  <text x="254" y="124" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Execute</text>
+  <line x1="292" y1="115" x2="306" y2="115" stroke="#38bdf8" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="306,111 314,115 306,119" fill="#38bdf8" opacity="0.7"/>
+  <rect x="314" y="90" width="76" height="50" rx="6" fill="#0d1f35" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="352" y="111" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace" font-weight="bold">MEM</text>
+  <text x="352" y="124" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Memory</text>
+  <line x1="390" y1="115" x2="404" y2="115" stroke="#38bdf8" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="404,111 412,115 404,119" fill="#38bdf8" opacity="0.7"/>
+  <rect x="412" y="90" width="88" height="50" rx="6" fill="#0d1f35" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="456" y="111" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace" font-weight="bold">WB</text>
+  <text x="456" y="124" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Writeback</text>
+  <rect x="20" y="165" width="140" height="45" rx="5" fill="#0a1a2e" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="90" y="183" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="monospace" font-weight="bold">Branch Predictor</text>
+  <text x="90" y="196" text-anchor="middle" fill="#64748b" font-size="6.5" font-family="monospace">Bimodal + gshare + BTB</text>
+  <line x1="58" y1="165" x2="58" y2="140" stroke="#7c3aed" stroke-width="1" opacity="0.7" stroke-dasharray="3,2"/>
+  <polygon points="54,140 58,132 62,140" fill="#7c3aed" opacity="0.7"/>
+  <rect x="174" y="165" width="140" height="45" rx="5" fill="#0a1a2e" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="244" y="183" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace" font-weight="bold">ROB + Rename</text>
+  <text x="244" y="196" text-anchor="middle" fill="#64748b" font-size="6.5" font-family="monospace">OOO  |  R10k-style</text>
+  <line x1="244" y1="165" x2="254" y2="140" stroke="#f59e0b" stroke-width="1" opacity="0.7" stroke-dasharray="3,2"/>
+  <polygon points="250,140 254,132 258,140" fill="#f59e0b" opacity="0.7"/>
+  <rect x="328" y="165" width="172" height="45" rx="5" fill="#0a1a2e" stroke="#10b981" stroke-width="1.2"/>
+  <text x="414" y="183" text-anchor="middle" fill="#34d399" font-size="8" font-family="monospace" font-weight="bold">Prefetch + Victim Cache</text>
+  <text x="414" y="196" text-anchor="middle" fill="#64748b" font-size="6.5" font-family="monospace">4-way D$ stream  |  1-way I$ stream</text>
+  <line x1="380" y1="165" x2="352" y2="140" stroke="#10b981" stroke-width="1" opacity="0.7" stroke-dasharray="3,2"/>
+  <polygon points="348,140 352,132 356,140" fill="#10b981" opacity="0.7"/>
+  <rect x="20" y="224" width="86" height="18" rx="4" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="63" y="236" text-anchor="middle" fill="#7dd3fc" font-size="7.5" font-family="monospace">SystemVerilog</text>
+  <rect x="114" y="224" width="56" height="18" rx="4" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="142" y="236" text-anchor="middle" fill="#7dd3fc" font-size="7.5" font-family="monospace">Python</text>
+  <rect x="178" y="224" width="46" height="18" rx="4" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="201" y="236" text-anchor="middle" fill="#7dd3fc" font-size="7.5" font-family="monospace">MIPS</text>
+  <rect x="232" y="224" width="36" height="18" rx="4" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="250" y="236" text-anchor="middle" fill="#7dd3fc" font-size="7.5" font-family="monospace">C</text>
+  <text x="260" y="254" text-anchor="middle" fill="#38bdf8" font-size="7.5" font-family="monospace" opacity="0.5">MIPS R10k · Hybrid Predictor · Stream Prefetch</text>
+</svg>

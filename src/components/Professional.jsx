@@ -9,7 +9,7 @@ export const experienceList = [
     title: "CSE Department Tutor",
     company: "UC San Diego",
     period: "June 2025 – Present",
-    summary: "Orchestrated academic success for 50+ students in Computer Architecture, driving measurable grade improvements through targeted intervention.",
+    summary: "Supporting 50+ students in CSE 141/L & 140 (Computer Architecture + Digital Design); ~15-pt avg. Midterm 2 improvement via 1-on-1 office hours. ~40 forum replies/quarter, <2 hr avg. response.",
   },
   {
     id: "exp2",
@@ -39,16 +39,30 @@ export const experienceList = [
     period: "Oct 2023 – June 2024",
     summary: "Calibrated 3-phase BLDC motor controllers and integrated pedal feedback systems for optimized torque control.",
   },
+  {
+    id: "exp6",
+    title: "CSE Department Chair (Events)",
+    company: "HKN – Eta Kappa Nu, UCSD",
+    period: "2024 – Present",
+    summary: "Designed and hosted 10+ technical workshops (Macro Key, I2C, ECE Depths Seminar). Coordinated with 15+ professors and alumni for events and technical guidance.",
+  },
+  {
+    id: "exp7",
+    title: "Volunteer Engineer",
+    company: "Early Learning & Cognition Lab, UCSD",
+    period: "2024",
+    summary: "Designed a child-proof 'blicket' machine using Arduino, 5 hall sensors, a rotary mode switch, and RGB LED to study probabilistic vs. deterministic learning in children under age 5. Designed 3D-printed enclosure.",
+  },
 ];
 
 // Data for the full‑detail cards (keyed by id)
 export const experienceFull = {
   exp1: {
-    title: "CSE Department Tutor - Computer Architecture",
+    title: "CSE Department Tutor - Computer Architecture & Digital Design",
     company: "UC San Diego",
     period: "June 2025 – Present",
     details:
-      "Spearheaded academic support for ~50 undergraduates in CSE 141/L. Architected targeted problem sets focusing on ARMv8 pipelines, hazards, caches, and memory models. \n\nLeveraged data-driven insights to co-design midterms and finals, resulting in a ~15-point average increase on Midterm 2 and a ~10% boost on Final exam scores through high-impact 1-on-1 interventions. Guided 100+ students in designing custom ISAs and single-cycle CPUs in SystemVerilog, debugging complex datapath/control logic to maximize synthesis success.",
+      "Led weekly sections and office hours for ~50 undergraduates in CSE 141/L (Computer Architecture) and CSE 140 (Digital Design). Prepared targeted problem sets on ARMv8 pipelines, hazards, caches, memory models, Boolean logic, combinational & sequential logic, FSMs and RTL abstraction. \n\nResponded to ~40 forum questions per quarter with an average response time under 2 hours. Co-designed and proctored midterms and finals; graded ~80 submissions using a structured rubric. \n\n1-on-1 office hour discussions led to an average ~15-point increase on Midterm 2 and ~10% improvement on the Final. Guided 100+ students in CSE 141L through designing custom ISAs and single-cycle CPUs in SystemVerilog, debugging datapath and control logic to improve synthesis success.",
   },
   exp2: {
     title: "Research Intern - VLSI System Design",
@@ -77,6 +91,20 @@ export const experienceFull = {
     period: "Oct 2023 – June 2024",
     details:
       "Configured and fine-tuned 3-phase BLDC motor controllers, meticulously calibrating pedal and throttle mapping for silky-smooth torque control. \n\nIntegrated and validated pedal feedback mechanisms with the primary drive system, ensuring stable current draw and highly responsive motor behavior.",
+  },
+  exp6: {
+    title: "CSE Department Chair (Events)",
+    company: "HKN – Eta Kappa Nu, UCSD",
+    period: "2024 – Present",
+    details:
+      "Serving as CSE Department Chair for Events within Eta Kappa Nu (HKN), the IEEE honor society for ECE/CSE. \n\nDesigned and hosted 10+ technical workshops including the Macro Key Workshop, I2C Workshop, and ECE Depths Seminar, providing hands-on embedded systems education to the UCSD engineering community. \n\nCommunicated and coordinated with 15+ professors and alumni for event planning, technical guidance, and project support. Participated in weekly meetings to facilitate the creation and execution of HKN events ranging from professional to social.",
+  },
+  exp7: {
+    title: "Volunteer Engineer",
+    company: "Early Learning & Cognition Lab, UCSD",
+    period: "2024",
+    details:
+      "Designed and built a child-proof 'blicket' machine used to study probabilistic vs. deterministic learning in children under age 5. \n\nConstructed using an Arduino microcontroller, 5 hall-effect sensors, a rotary mode switch, and an RGB LED to create an interactive object-detection toy. Also 3D-designed and printed a custom enclosure to make the hardware safe and appealing for young children.",
   },
 };
 
