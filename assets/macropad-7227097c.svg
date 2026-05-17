@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:gn="http://www.goodnotes.com/gn-svg" width="520" height="260" viewBox="0 0 520 260">
+  <rect width="520" height="260" fill="#050816"/>
+  <rect x="28" y="18" width="464" height="224" rx="14" fill="#060e1a" stroke="#1a3a28" stroke-width="2"/>
+  <line x1="28" y1="60" x2="148" y2="60" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="372" y1="60" x2="492" y2="60" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="28" y1="130" x2="133" y2="130" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="387" y1="130" x2="492" y2="130" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="28" y1="200" x2="148" y2="200" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="372" y1="200" x2="492" y2="200" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="155" y1="18" x2="155" y2="42" stroke="#0d3020" stroke-width="0.8"/>
+  <line x1="365" y1="18" x2="365" y2="42" stroke="#0d3020" stroke-width="0.8"/>
+  <circle cx="88" cy="130" r="32" fill="#09121e" stroke="#1a3828" stroke-width="1.5"/>
+  <circle cx="88" cy="130" r="21" fill="#0c1a26" stroke="#22402e" stroke-width="1"/>
+  <circle cx="88" cy="130" r="9" fill="#162030" stroke="#38bdf8" stroke-width="1"/>
+  <line x1="88" y1="97" x2="88" y2="104" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="88" y1="156" x2="88" y2="163" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="55" y1="130" x2="62" y2="130" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="114" y1="130" x2="121" y2="130" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="432" cy="130" r="32" fill="#09121e" stroke="#1a3828" stroke-width="1.5"/>
+  <circle cx="432" cy="130" r="21" fill="#0c1a26" stroke="#22402e" stroke-width="1"/>
+  <circle cx="432" cy="130" r="9" fill="#162030" stroke="#38bdf8" stroke-width="1"/>
+  <line x1="432" y1="97" x2="432" y2="104" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="432" y1="156" x2="432" y2="163" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="399" y1="130" x2="406" y2="130" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="458" y1="130" x2="465" y2="130" stroke="#38bdf8" stroke-width="1.2" opacity="0.5"/>
+  <rect x="155" y="42" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="159" y="46" width="54" height="38" rx="3" fill="#c0392b"/>
+  <rect x="161" y="48" width="22" height="8" rx="1.5" fill="#e74c3c" opacity="0.7"/>
+  <rect x="161" y="58" width="14" height="4" rx="1" fill="#ff7675" opacity="0.5"/>
+  <rect x="228" y="42" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="232" y="46" width="54" height="38" rx="3" fill="#27ae60"/>
+  <rect x="234" y="48" width="22" height="8" rx="1.5" fill="#2ecc71" opacity="0.7"/>
+  <rect x="234" y="58" width="14" height="4" rx="1" fill="#55efc4" opacity="0.5"/>
+  <rect x="301" y="42" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="305" y="46" width="54" height="38" rx="3" fill="#2980b9"/>
+  <rect x="307" y="48" width="22" height="8" rx="1.5" fill="#3498db" opacity="0.7"/>
+  <rect x="307" y="58" width="14" height="4" rx="1" fill="#74b9ff" opacity="0.5"/>
+  <rect x="155" y="112" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="159" y="116" width="54" height="38" rx="3" fill="#e67e22"/>
+  <rect x="161" y="118" width="22" height="8" rx="1.5" fill="#f39c12" opacity="0.7"/>
+  <rect x="161" y="128" width="14" height="4" rx="1" fill="#ffeaa7" opacity="0.5"/>
+  <rect x="228" y="112" width="62" height="60" rx="6" fill="#0c1825" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="232" y="116" width="54" height="38" rx="3" fill="#0f172a"/>
+  <text x="259" y="138" text-anchor="middle" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="bold">ESP32</text>
+  <rect x="301" y="112" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="305" y="116" width="54" height="38" rx="3" fill="#8e44ad"/>
+  <rect x="307" y="118" width="22" height="8" rx="1.5" fill="#9b59b6" opacity="0.7"/>
+  <rect x="307" y="128" width="14" height="4" rx="1" fill="#d980fa" opacity="0.5"/>
+  <rect x="155" y="182" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="159" y="186" width="54" height="38" rx="3" fill="#d35400"/>
+  <rect x="161" y="188" width="22" height="8" rx="1.5" fill="#e67e22" opacity="0.7"/>
+  <rect x="161" y="198" width="14" height="4" rx="1" fill="#ffa502" opacity="0.5"/>
+  <rect x="228" y="182" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="232" y="186" width="54" height="38" rx="3" fill="#c0392b"/>
+  <rect x="234" y="188" width="22" height="8" rx="1.5" fill="#e91e63" opacity="0.7"/>
+  <rect x="234" y="198" width="14" height="4" rx="1" fill="#fd79a8" opacity="0.5"/>
+  <rect x="301" y="182" width="62" height="60" rx="6" fill="#0b1825" stroke="#1e3a48" stroke-width="1"/>
+  <rect x="305" y="186" width="54" height="38" rx="3" fill="#16a085"/>
+  <rect x="307" y="188" width="22" height="8" rx="1.5" fill="#1abc9c" opacity="0.7"/>
+  <rect x="307" y="198" width="14" height="4" rx="1" fill="#55efc4" opacity="0.5"/>
+  <rect x="240" y="235" width="40" height="7" rx="2" fill="#1a3040" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+  <text x="260" y="251" text-anchor="middle" fill="#38bdf8" font-size="8" font-family="monospace" opacity="0.6">MACROPAD v1  |  ESP32  |  9x OLED  |  Qt</text>
+</svg>
