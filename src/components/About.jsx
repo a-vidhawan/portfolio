@@ -95,13 +95,14 @@ function About({ id }) {
                 <p>
                   I&apos;m a computer architecture and embedded systems engineer who
                   likes thinking about systems from the ISA down to timing diagrams
-                  and then back up to firmware and tools.
+                  and back up to firmware and tools. GPA 3.85 · Provost Honors.
                 </p>
                 <p>
-                  I enjoy designing custom processors, debugging weird FPGA timing issues,
-                  and building the firmware that makes hardware feel effortless to use.
-                  Recently I&apos;ve been splitting time between tutoring computer
-                  architecture, leading a Macropad project, and exploring RISC-V SoCs.
+                  I enjoy designing custom processors, debugging FPGA timing issues,
+                  and building firmware that makes hardware feel effortless. Recently
+                  splitting time between tutoring computer architecture at UCSD,
+                  leading the MacroPad project, exploring OOO CPU microarchitecture,
+                  and running technical workshops as HKN CSE Department Chair.
                 </p>
               </div>
             </div>
@@ -109,16 +110,23 @@ function About({ id }) {
             {/* Info Grid (Education & Skills) */}
             <div className="grid md:grid-cols-2 gap-4">
               {/* Education Box */}
-              <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-2 hover:border-slate-700 transition-colors">
+              <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-3 hover:border-slate-700 transition-colors">
                 <p className="text-xs uppercase tracking-wider text-sky-400 font-semibold">
                   Education
                 </p>
-                <h3 className="text-lg font-semibold text-slate-100">
-                  B.S. Computer Engineering
-                </h3>
-                <p className="text-slate-400 text-sm">
-                  UC San Diego
-                </p>
+                <div className="space-y-1">
+                  <h3 className="text-base font-semibold text-slate-100">
+                    M.S. Computer Engineering
+                  </h3>
+                  <p className="text-slate-400 text-sm">UC San Diego · Starting 2026</p>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-base font-semibold text-slate-100">
+                    B.S. Computer Engineering
+                  </h3>
+                  <p className="text-slate-400 text-sm">UC San Diego · GPA 3.85</p>
+                  <p className="text-xs text-sky-400/70">Provost Honors</p>
+                </div>
               </div>
 
               {/* Skills Box (Trigger) */}
