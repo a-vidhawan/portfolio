@@ -2,57 +2,74 @@ import React, { useRef, useState, useEffect } from "react";
 import { ArrowUpRight, Minus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-// Images for thumbnails
+// Placeholder thumbnails. Generated images saved to src/assets/generated/
+// with the matching name (e.g. "macropad.png") replace these automatically.
 import cpuImg from "../assets/cpu.png";
 import fpgaImg from "../assets/fpga.png";
 import macropadImg from "../assets/macropad.svg";
 import mipsImg from "../assets/mips.svg";
 import nachosImg from "../assets/nachos.svg";
 import nixieImg from "../assets/nixie.svg";
+import smarthomeImg from "../assets/smarthome.png";
+import { generatedImage } from "../lib/images";
+
+const thumbs = {
+  proj1: generatedImage("macropad", macropadImg),
+  proj2: generatedImage("mips-ooo", mipsImg),
+  proj3: generatedImage("sora-cpu", cpuImg),
+  proj4: generatedImage("nachos-os", nachosImg),
+  proj5: generatedImage("viterbi", fpgaImg),
+  proj6: generatedImage("nixie-clock", nixieImg),
+  proj7: generatedImage("smart-clock", smarthomeImg),
+};
+
+// Thumbnail first, then any optional extra gallery shots ("<name>-2", "<name>-3")
+const gallery = (id, name) =>
+  [thumbs[id], generatedImage(`${name}-2`), generatedImage(`${name}-3`)].filter(Boolean);
 
 // Mini‑list data (thumbnail, title, summary)
 export const projectsList = [
   {
     id: "proj1",
     title: "MacroPad - Project Lead",
-    summary: "Led 9-person team to build a modular ESP32 MacroPad with 9 OLEDs and custom Qt companion app.",
-    thumb: macropadImg,
-  },
-  {
-    id: "proj7",
-    title: "MIPS CPU with Advanced Optimizations",
-    summary: "Extended MIPS CPU with OOO execution, McFarling hybrid branch prediction, hardware prefetching, and victim caches.",
-    thumb: mipsImg,
+    summary: "Led a 9-person team to build a modular ESP32 MacroPad with 9 RGB OLED keys, rotary encoders, a custom PCB and a cross-platform Qt companion app.",
+    thumb: thumbs.proj1,
   },
   {
     id: "proj2",
-    title: "Sora v1.0 - Custom CPU",
-    summary: "Architected 9-bit ISA and single-cycle CPU in SystemVerilog; achieved double precision math on constrained datapath.",
-    thumb: cpuImg,
+    title: "MIPS CPU with Advanced Optimizations",
+    summary: "Extended a MIPS CPU with R10k-style out-of-order execution, McFarling hybrid branch prediction, stream-buffer prefetching and victim caches.",
+    thumb: thumbs.proj2,
   },
   {
     id: "proj3",
-    title: "Nachos Operating System",
-    summary: "Implemented preemptive threading, multiprogramming, and demand-paged virtual memory in Java/MIPS.",
-    thumb: nachosImg,
+    title: "Sora v1.0 - Custom ISA & CPU",
+    summary: "Authored a 9-bit ISA and single-cycle CPU in SystemVerilog with a Python assembler; fastest execution in the class.",
+    thumb: thumbs.proj3,
   },
   {
     id: "proj4",
-    title: "Viterbi Encoder/Decoder",
-    summary: "Built pipelined Viterbi decoder (K=7) in SystemVerilog; verified with deterministic/random error injection.",
-    thumb: fpgaImg,
+    title: "Nachos Operating System",
+    summary: "Implemented preemptive threading, multiprogramming, process syscalls and demand-paged virtual memory in Java/MIPS.",
+    thumb: thumbs.proj4,
   },
   {
     id: "proj5",
-    title: "Nixie Tube Clock",
-    summary: "Designed retro-style clock using 1900s IN-14 vacuum tubes and CH32V RISC-V platform.",
-    thumb: nixieImg,
+    title: "Viterbi Encoder/Decoder",
+    summary: "Built a K=7 convolutional encoder and pipelined Viterbi decoder in SystemVerilog; verified with deterministic and random error injection.",
+    thumb: thumbs.proj5,
   },
   {
     id: "proj6",
+    title: "Nixie Tube Clock",
+    summary: "Designed a retro clock driving IN-14 vacuum tubes from a CH32V RISC-V board, with alarm and 4 preset time zones.",
+    thumb: thumbs.proj6,
+  },
+  {
+    id: "proj7",
     title: "Ultrasonic Smart Clock",
-    summary: "Prototyped gesture-controlled smart clock with ultrasonic sensors and CircuitPython.",
-    thumb: macropadImg,
+    summary: "Prototyped an alarm clock that uses an ultrasonic sensor to tell whether you're still in bed before it rings.",
+    thumb: thumbs.proj7,
   },
 ];
 
@@ -61,44 +78,44 @@ export const projectsFull = {
   proj1: {
     title: "MacroPad - Project Lead",
     details:
-      "Led a high-velocity 9-person engineering team to design a modular ESP32 MacroPad featuring 9 64x64 RGB OLEDs, mechanical keys, and rotary encoders. \n\nEngineered a seamless desktop activation ecosystem via a custom, cross-platform Qt companion app (C++/Objective C). Implemented a high-performance serial protocol achieving profile switches in <50ms and activation latency <40ms. Designed custom driver circuits for SSD1357z controllers and integrated them into a bespoke PCB. \n\nManaged sprint cadence, code reviews, and integration across the full team of 9.",
-    gallery: [macropadImg],
-  },
-  proj7: {
-    title: "MIPS CPU with Advanced Optimizations",
-    details:
-      "Extended a baseline MIPS CPU with four research-inspired optimizations targeting modern processor performance techniques. \n\nImplemented McFarling-style hybrid branch prediction combining bimodal and gshare predictors with a Branch Target Buffer (BTB) in the IF stage. Built an MIPS R10k-style out-of-order execution engine with register renaming, dynamic scheduling, and in-order commit via a Reorder Buffer (ROB). \n\nIntegrated hardware data prefetching using a 4-way stream buffer for D-cache and a 1-way stream buffer for I-cache to hide miss latency. Added victim caches for both D-cache and I-cache to reduce conflict misses and improve effective cache hit rate. \n\nImplemented in SystemVerilog with a Python-based assembler and C test programs.",
-    gallery: [mipsImg],
+      "Led a 9-person engineering team to design a modular ESP32 MacroPad featuring 9 64x64 RGB OLEDs, mechanical keys, and 2 rotary encoders. \n\nBuilt seamless desktop activation through a custom, cross-platform Qt companion application written in C++ and Objective-C. Implemented a serial protocol supporting profile switches in <50 ms and activation latency <40 ms. Designed the driver circuit for the SSD1357z display controller and integrated it into the custom keyboard PCB. \n\nRan sprint cadence, code reviews, and integration across the full team. \n\nTools: C++, KiCad, LTSpice.",
+    gallery: gallery("proj1", "macropad"),
   },
   proj2: {
-    title: "Sora v1.0 - Self Designed ISA and CPU",
+    title: "MIPS CPU with Advanced Optimizations",
     details:
-      "Authored a novel 9-bit ISA (16 instructions, load-store architecture) and 8-bit datapath. \n\nAchieved Hamming Distance Calculation and double precision multiplication using only 9 bits—clocking the fastest execution in the class. Implemented single-cycle RTL in SystemVerilog, simulated in ModelSim, and resource-mapped on Cyclone-V using QuartusPrime. Wrote a custom assembler in Python to streamline development.",
-    gallery: [cpuImg],
+      "Extended a baseline MIPS CPU with four optimizations inspired by research papers and modern processors. \n\nImplemented McFarling-style hybrid branch prediction (bimodal + gshare) with BTB integration in the IF stage. Built a MIPS R10k-style out-of-order execution engine with register renaming, dynamic scheduling, and in-order commit. \n\nIntegrated hardware data prefetching using a 4-way stream buffer for the D-cache and a 1-way stream buffer for the I-cache to hide miss latency. Added victim caches for both to reduce conflict misses and improve effective cache hit rate. \n\nTools: SystemVerilog, Python, C.",
+    gallery: gallery("proj2", "mips-ooo"),
   },
   proj3: {
-    title: "Nachos Operating System",
+    title: "Sora v1.0 - Self Designed ISA and CPU",
     details:
-      "Engineered a robust OS kernel implementing preemptive threads with Alarm, join, interrupt-based condition variables, sleepFor and tagged Rendezvous. \n\nAdded full multiprogramming with safe rVM/wVM, 16-FD file tables, and concurrent user-program execution. Built exec/join/exit with unique PIDs, parent–child synchronization, and robust process cleanup on abnormal termination. \n\nDesigned a demand-paged Virtual Memory system featuring lazy loading, swap space, clock eviction, dirty-bit optimization, and page pinning.",
-    gallery: [nachosImg],
+      "Authored a 9-bit ISA (16 instructions, 2 addressing modes, load-store architecture) with an 8-bit datapath, and wrote its assembler in Python. \n\nAchieved Hamming distance calculation and double-precision multiplication using only 9-bit instructions, with the fastest execution in the class. \n\nSingle-cycle design with RTL in SystemVerilog, simulated in ModelSim, and resource-mapped onto a Cyclone V using Quartus Prime.",
+    gallery: gallery("proj3", "sora-cpu"),
   },
   proj4: {
-    title: "Viterbi Encoder/Decoder",
+    title: "Nachos Operating System",
     details:
-      "Implemented a high-performance convolutional encoder (rate 1/2, K=7) and pipelined Viterbi decoder (ACS + traceback depth 35) in SystemVerilog. \n\nVerified system integrity via end-to-end tx/rx testbenches, achieving min branch metric = 0 in noise-free channels. Built robust deterministic and random error-injection frameworks to evaluate uncorrected errors across periodic/burst patterns up to a 1/16 rate. Synthesized on Cyclone V.",
-    gallery: [fpgaImg],
+      "Implemented preemptive threads with Alarm, join, interrupt-based condition variables, sleepFor and tagged Rendezvous. \n\nAdded full multiprogramming with safe rVM/wVM, 16-FD file tables, and concurrent user-program execution. Built exec/join/exit with unique PIDs, parent–child synchronization, and robust process cleanup on abnormal termination. \n\nDesigned a demand-paged virtual memory system with lazy loading, swap, clock eviction, dirty-bit optimization, and page pinning. \n\nTools: Java, Nachos, MIPS.",
+    gallery: gallery("proj4", "nachos-os"),
   },
   proj5: {
-    title: "Nixie Tube Clock",
+    title: "Viterbi Encoder/Decoder",
     details:
-      "Designed a vintage-aesthetic 'Nixie Clock' utilizing 1900s IN-14 vacuum tubes with 11-pin cathode/anode interfaces. \n\nBuilt on the VSDSquadron Mini (CH32V RISC-V platform) in C++. Integrated multi-time zone support (4 pre-set TZ buttons), a standard alarm layout, and engineered the hardware/firmware interface for reliable high-voltage tube control.",
-    gallery: [nixieImg],
+      "Implemented a convolutional encoder (rate 1/2, K=7) and a pipelined Viterbi decoder (ACS + traceback depth 35) in SystemVerilog. Passed the end-to-end tx/rx testbench and verified min branch metric = 0 in a no-error channel. \n\nBuilt deterministic and random error injection, and evaluated uncorrected errors across periodic and burst patterns up to a 1/16 rate. \n\nSynthesized on Cyclone V; exported RTL-viewer/netlist and wrote state-transition and branch-metric notes for reproducibility. \n\nTools: SystemVerilog, ModelSim, Quartus.",
+    gallery: gallery("proj5", "viterbi"),
   },
   proj6: {
+    title: "Nixie Tube Clock",
+    details:
+      "Designed a 'Nixie Clock' using vintage IN-14 vacuum tubes with an 11-pin cathode/anode interface. \n\nBuilt on the VSDSquadron Mini (CH32V RISC-V platform) in C++, with a built-in alarm using a standard alarm-clock setting layout. Added time zone switching with 4 buttons for 4 preset time zones. \n\nTools: PSpice, LTSpice, circuit design, CH32V.",
+    gallery: gallery("proj6", "nixie-clock"),
+  },
+  proj7: {
     title: "Ultrasonic Smart Clock",
     details:
-      "Innovated a 'Smart Clock' leveraging an ultrasonic sensor to detect if the user was still sleeping and decide accordingly whether to ring the alarm. \n\nProgrammed using CircuitPython on a Metro M0 Express. Implemented gesture-based 'Stop' and 'Snooze' functionality. Utilized Onshape for 3D modeling of the prototype enclosure and EagleCAD for circuit design. Aiming to add 'Time Setting' in a future iteration.",
-    gallery: [macropadImg],
+      "Designed a 'Smart Clock' that uses an ultrasonic sensor to detect whether the user is still sleeping, and decides accordingly whether to ring the alarm. Programmed in CircuitPython on a Metro M0 Express. \n\nAdded 'Stop' and 'Snooze' functionality, with 'Time Setting' planned for a future iteration. \n\nModeled the prototype in Onshape and drew the circuit diagrams in EagleCAD.",
+    gallery: gallery("proj7", "smart-clock"),
   },
 };
 

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { projectsList, projectsFull } from "../components/Projects";
 
 export default function ProjectsPage() {

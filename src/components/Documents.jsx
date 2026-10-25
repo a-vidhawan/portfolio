@@ -1,24 +1,21 @@
 // src/components/Documents.jsx
 import React, { useEffect, useRef, useState } from "react";
 
+// Files live in public/documents/; prefix with the Vite base so links work on GitHub Pages
+const docUrl = (file) => `${import.meta.env.BASE_URL}documents/${file}`;
+
 const documents = [
   {
     id: "doc1",
     title: "Curriculum Vitae",
-    desc: "Full academic and professional history.",
-    url: "/docs/AaravVidhawan_CV.pdf",
+    desc: "Full academic and professional history (Oct 2026).",
+    url: docUrl("Aarav_Vidhawan_CV.pdf"),
   },
   {
     id: "doc2",
     title: "Resume",
     desc: "Concise summary of skills and experience.",
-    url: "/docs/AaravVidhawan_Resume.pdf",
-  },
-  {
-    id: "doc3",
-    title: "Other",
-    desc: "Portfolio, transcripts or certificates.",
-    url: "/docs/AaravVidhawan_Other.pdf",
+    url: docUrl("AVResumeNov25.pdf"),
   },
 ];
 
@@ -63,7 +60,7 @@ export default function Documents({ id }) {
       <div className="mt-6">
         <div
           ref={stripRef}
-          className="scroll-area flex gap-5 overflow-x-auto pb-2 scroll-smooth"
+          className="custom-scrollbar flex gap-5 overflow-x-auto pb-2 scroll-smooth"
           onWheel={handleWheel}
           style={{ overscrollBehaviorX: "contain" }}
         >

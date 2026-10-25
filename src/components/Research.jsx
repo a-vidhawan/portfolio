@@ -6,16 +6,16 @@ import { useNavigate } from "react-router-dom";
 export const researchItems = [
   {
     id: "res1",
-    title: "To be initiated",
-    summary: "Stay tuned for upcoming research projects.",
-    details: "Work in progress – check back soon!",
+    title: "Clockless Hopfield Networks in Hardware",
+    summary: "SRIP · Prof. Bill Lin · Apr 2026 – Present. A compiler from trained Hopfield weights to clockless, synthesizable SystemVerilog, verified at N=256 with 240/240 patterns recalled.",
   },
 ];
 
 export const researchFull = {
   res1: {
-    title: "Research Experience",
-    details: "Work in progress – check back soon!",
+    title: "Clockless Hopfield Networks in Hardware",
+    details:
+      "Undergraduate Research Assistant, Summer Research Internship Program (SRIP) at the UCSD Jacobs School of Engineering, advised by Prof. Bill Lin. April 2026 – Present. \n\nCompiler: Built a compiler from trained Hopfield network weights to synthesizable SystemVerilog, using Espresso logic minimization and graph-colored delay scheduling. Verified at N=256 neurons with 240/240 test vectors recalled. \n\nLogic reduction: Cut per-neuron logic from 627–2,918 down to 31–54 product terms using operating-region don't-cares, making fan-in 32 synthesizable where full enumeration is impossible. \n\nClockless settling: Showed that asynchronous settling requires distinct delay values (equal delays: 0% convergence) and inertial rather than transport delay elements (100% vs 1–16% convergence). \n\nCapacity: Raised storage capacity from α=0.138 to α=0.5 (≥95% recall) via margin retraining. \n\nTools: SystemVerilog, Python, Yosys.",
   },
 };
 

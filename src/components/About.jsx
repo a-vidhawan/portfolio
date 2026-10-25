@@ -1,6 +1,10 @@
 // src/components/About.jsx
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { generatedImage } from '../lib/images';
+
+// Drop a real photo at src/assets/generated/profile.(jpg|png) to replace the placeholder
+const profilePhoto = generatedImage('profile');
 
 /**
  * About section with toggleable Skill Map.
@@ -15,48 +19,48 @@ function About({ id }) {
 
   const topSkills = [
     'SystemVerilog / Verilog',
-    'RISC-V & ARM',
+    'Computer Architecture',
     'Embedded C/C++',
-    'ESP32 / CH32V',
-    'Digital Design & Timing',
+    'ESP32 / STM32 / CH32V',
     'FPGA (Quartus / Vivado)',
+    'Logic Synthesis (Yosys)',
     'PCB & Circuit Design',
   ];
 
   const categories = {
+    'Hardware Design & Verification': [
+      'SystemVerilog & Verilog RTL, testbenches',
+      'Custom ISA & CPU design (single-cycle, OOO)',
+      'Branch prediction, caches & prefetching',
+      'MIPS, ARMv8 & RISC-V',
+      'FPGA prototyping (Cyclone V, Quartus, Vivado)',
+      'Vitis HLS, Yosys, Espresso logic minimization',
+      'ModelSim, Cadence Virtuoso',
+    ],
     Firmware: [
       'C, C++ (bare-metal & RTOS)',
       'Arduino / ESP32 / STM32 / CH32V',
       'FreeRTOS & task scheduling',
-      'SPI, I²C, UART, USART drivers',
+      'SPI, I²C, UART/USART drivers',
       'Low-level bring-up & debugging',
     ],
-    Hardware: [
-      'Custom ISA & CPU design',
-      'RISC-V pipelines & hazards',
-      'SystemVerilog RTL & testbenches',
-      'FPGA prototyping (Cyclone V, Vivado)',
-      'Viterbi encoder/decoder, encoding chains',
-      'Power & driver stages (BLDC, solenoids)',
-    ],
-    Software: [
+    'Systems & Software': [
+      'Threads, synchronization & multiprogramming',
+      'Virtual memory (Nachos OS)',
       'Python, Java, JavaScript',
-      'React, HTML, CSS',
-      'Operating Systems (Nachos)',
-      'Linux, shell tooling',
-      'Intro CUDA & parallel patterns',
+      'Qt / C++ / Objective-C desktop apps',
+      'React, HTML, CSS, ServiceNow',
     ],
-    Tools: [
-      'Quartus, ModelSim, Vivado',
+    'Circuits & Tools': [
       'PSpice / LTSpice',
-      'KiCad / Eagle',
-      'Git / GitHub',
-      'VS Code, JIRA, Confluence',
-      'Scopes, DMMs, lab equipment',
+      'KiCad / EagleCAD / Onshape',
+      'Git / GitHub, VS Code',
+      'JIRA / Confluence',
+      'Oscilloscope, multimeter, soldering',
     ],
     'Other Skills': [
       'Technical tutoring & workshop design',
-      'Team leadership (MacroPad project)',
+      'Team leadership (9-person MacroPad team)',
       'Documentation & reproducible notes',
       'Cross-functional communication',
     ],
@@ -75,11 +79,20 @@ function About({ id }) {
           {/* Left: Photo (moved from Hero) */}
           <div className="md:col-span-4 lg:col-span-4">
             <div className="aspect-[3/4] rounded-2xl border border-slate-800 bg-slate-950/50 flex items-center justify-center text-slate-500 text-xs tracking-wide overflow-hidden relative group">
-              {/* Placeholder for photo */}
-              <div className="absolute inset-0 bg-gradient-to-b from-slate-800/20 to-slate-950/80" />
-              <span className="px-4 text-center relative z-10">
-                [Photo Placeholder]
-              </span>
+              {profilePhoto ? (
+                <img
+                  src={profilePhoto}
+                  alt="Aarav Vidhawan"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-b from-slate-800/20 to-slate-950/80" />
+                  <span className="px-4 text-center relative z-10">
+                    [Photo Placeholder]
+                  </span>
+                </>
+              )}
             </div>
           </div>
 
@@ -93,15 +106,17 @@ function About({ id }) {
               </h2>
               <div className="space-y-4 text-slate-300/90 leading-relaxed text-base md:text-lg">
                 <p>
-                  I&apos;m a computer architecture and embedded systems engineer who
-                  likes thinking about systems from the ISA down to timing diagrams
-                  and back up to firmware and tools. GPA 3.85 · Provost Honors.
+                  I&apos;m a computer engineer focused on architecture and embedded
+                  systems. I like thinking about systems from the ISA down to timing
+                  diagrams and back up to firmware and tools. Now pursuing my M.S. in
+                  Computer Engineering at UC San Diego, after a B.S. there (GPA 3.85,
+                  Provost Honors).
                 </p>
                 <p>
                   I enjoy designing custom processors, debugging FPGA timing issues,
-                  and building firmware that makes hardware feel effortless. Recently
-                  splitting time between tutoring computer architecture at UCSD,
-                  leading the MacroPad project, exploring OOO CPU microarchitecture,
+                  and building firmware that makes hardware feel effortless. Lately
+                  I&apos;m researching clockless Hopfield networks in hardware with
+                  Prof. Bill Lin, tutoring computer architecture and digital design,
                   and running technical workshops as HKN CSE Department Chair.
                 </p>
               </div>
@@ -118,13 +133,13 @@ function About({ id }) {
                   <h3 className="text-base font-semibold text-slate-100">
                     M.S. Computer Engineering
                   </h3>
-                  <p className="text-slate-400 text-sm">UC San Diego · Starting 2026</p>
+                  <p className="text-slate-400 text-sm">UC San Diego · 2026 – Present</p>
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-base font-semibold text-slate-100">
                     B.S. Computer Engineering
                   </h3>
-                  <p className="text-slate-400 text-sm">UC San Diego · GPA 3.85</p>
+                  <p className="text-slate-400 text-sm">UC San Diego · 2022 – 2026 · GPA 3.85</p>
                   <p className="text-xs text-sky-400/70">Provost Honors</p>
                 </div>
               </div>
@@ -177,7 +192,7 @@ function About({ id }) {
               Skill Map
             </h2>
             <p className="text-xs md:text-sm text-slate-400">
-              Firmware, hardware, software, tools &amp; everything in between.
+              Hardware, firmware, systems, tools &amp; everything in between.
             </p>
           </div>
           <button
